@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Grid</title>
+    <style>
+        .form-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-container input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        /* Media query para pantallas de tamaño medio */
+        @media (max-width: 768px) {
+            .form-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Media query para pantallas muy pequeñas (móviles) */
+        @media (max-width: 480px) {
+            .form-container input {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <label for="">name</label>
+        <input type="text" placeholder="Campo 1">
+        <input type="text" placeholder="Campo 2">
+        <input type="text" placeholder="Campo 3">
+        <input type="text" placeholder="Campo 4">
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="1.css">
+
+</head>
+<style>
+    /* Estilos para pantallas grandes (desktops) */
+@media (min-width: 1024px) {
+    
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container > *{
+    background-color:rgba(247, 18, 18, 0.229) ;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+}
+   
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    .item:nth-child(1) {
+  grid-area: item1;
+}
+.item:nth-child(2) {
+  grid-area: item2;
+}
+.item:nth-child(3) {
+  grid-area: item3;
+}
+.item:nth-child(4) {
+  grid-area: item4;
+}
+    /*contenedor primero con grid */
+     .container{
+        background: transparent;
+        box-shadow: 0 0 10PX rgba(255, 255, 255, 0);
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+            "item2"
+            "item4"
+            "item3"
+            "item1";
+            
+
+    }
+    .container > *{
+        border: 2px solid rgb(0, 255, 217);
+        background-color: rgb(0, 136, 255);
+
+       
+    }
+    
+    /*segundo adentro del header*/
+    .container .item:nth-child(3) {
+  border-radius:  15px;
+
+   }
+  /*adentro en los input*/
+  .form-grid{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+  }
+
+
+    
+}
+</style>
+<body>
+
+    
+<section class="container">
+    <div class="item">
+    </div>
+    <div class="item">
+        <header class="header1"><H1>CESAR EDUARDO ALBITER CASTRO</H1></header>
+        <header class="header2"><center><h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quo molestias eligendi sit! Similique ut provident, fuga temporibus repudiandae laboriosam, autem eius tempore maiores perferendis dignissimos saepe rerum pariatur unde libero quidem animi dicta doloribus ratione adipisci! Molestias mollitia, obcaecati qui impedit ea doloribus veritatis, repellendus voluptates iusto, perferendis quasi expedita nisi officia assumenda reprehenderit officiis esse doloremque saepe magni?</h5></center></header>
+        <header class="header3">3</header>
+    </div>
+    <div class="item">cuestionario en base de datos</div>
+    <div class="item">  
+        <article class="article1">
+
+            <form class="form-grid">
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Correo Electrónico">
+                <input type="text" placeholder="Dirección">
+                <button type="submit">suscribirte</button>
+            </form>
+
+        </article>
+        
+    </div>
+    
+   
+</section>
+</body>
+</html>
